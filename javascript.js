@@ -1,12 +1,22 @@
-var elem = document.getElementById('task');
-elem.addEventListener('click', func);
-var elem1 = document.getElementsByClassName('cls');
+let money = prompt ("Ваш бюджет на месяц?", ""),
+	time = prompt("Введите дату в формате YYYY-MM-DD", "15-15-2015");
 
-function func() {
-	var sum = 0;
-	for (var i = 0; i < elem1.length; i++) {
-		sum += +elem1[i].value;
+	let appData = {
+		budget:money,
+		timeData:time,
+		expenses: {},
+		optionExpenses: {},
+		income: {},
+		saving: false
 	}
-	var newElem = document.getElementById('sum');
-	newElem.value = sum;
-}  
+
+	let a1 = prompt("Введите обязательную статью расходов в этом месяце", ""),
+		a2 = prompt("Во сколько обойдется?", ""),
+		a3 = prompt("Введите обязательную статью расходов в этом месяце", ""),
+		a4 = prompt("Во сколько обойдется?", "");
+
+		appData.expenses.a1=a2;
+		appData.expenses.a3=a4;
+		alert(appData.budget/30);
+
+
